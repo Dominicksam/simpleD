@@ -11,16 +11,15 @@
  */
 int main(void)
 {
-    char command[150];
+	char command[150];
 
-    while (true)
-    {
-        prompt_display();
-        read_command(command, sizeof(command));
-        execute_command(command);
-    }
-
-    return 0; 
+	while (true)
+	{
+		prompt_display();
+		read_command(command, sizeof(command));
+		execute_command(command);
+	}
+	return (0);
 }
 
 /**
@@ -31,6 +30,6 @@ int main(void)
  */
 void prompt_display(void)
 {
-    dom_print("Domnick_shell$ ");
+	dom_print("Domnick_shell$ ");
 }
 
