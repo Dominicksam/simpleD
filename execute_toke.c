@@ -15,6 +15,8 @@ void execute_command(const char *command)
 	char *args[150];
 	char *token = strtok((char *)command, " ");
 	int arg_count = 0;
+	char *cmd = args[0];
+	char *envp[] = { NULL };
 
 if (child_pid == -1)
 {
@@ -29,9 +31,6 @@ else if (child_pid == 0)
 		token = strtok(NULL, " ");
 	}
 	args[arg_count] = NULL;
-
-	char *cmd = args[0];
-	char *envp[] = { NULL };
 
 	if (execve(cmd, args, envp) == -1)
 	{
