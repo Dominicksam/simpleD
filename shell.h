@@ -12,5 +12,6 @@ void prompt_display(void);
 void dom_print(const char *text);
 void read_command(char *command, size_t size);
 void execute_command(const char *command);
+void dom_print_int(int value);
 
 #endif
