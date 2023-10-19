@@ -44,14 +44,12 @@ void execute_command(const char *command)
 			if (exit_status != 0)
 			{
 				dom_print("Command execution failed with exit status ");
-				dom_print_int(exit_status);
 				dom_print(".\n");
 			}
 		}
 		else if (WIFSIGNALED(status))
 		{
 			dom_print("Command terminated by signal ");
-			dom_print_int(WTERMSIG(status));
 			dom_print(".\n");
 		}
 	}
